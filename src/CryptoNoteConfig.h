@@ -37,8 +37,8 @@ const size_t   BLOCKCHAIN_TIMESTAMP_CHECK_WINDOW             = 60;
 const uint64_t MONEY_SUPPLY                                  = UINT64_C(320000000000000000);
 const uint64_t TAIL_EMISSION_REWARD                          = UINT64_C(10000000000);
 const size_t CRYPTONOTE_COIN_VERSION                         = 1;
+const uint64_t GENESIS_BLOCK_REWARD                          =((MONEY_SUPPLY / 100) * 13);
 const unsigned EMISSION_SPEED_FACTOR                         = 20;
-const uint64_t GENESIS_BLOCK_REWARD                          =((MONEY_SUPPLY / 100) * 13)
 static_assert(EMISSION_SPEED_FACTOR <= 8 * sizeof(uint64_t), "Bad EMISSION_SPEED_FACTOR");
 
 const size_t   CRYPTONOTE_REWARD_BLOCKS_WINDOW               = 100;
@@ -136,8 +136,8 @@ const size_t   P2P_DEFAULT_HANDSHAKE_INVOKE_TIMEOUT          = 5000;          //
 const char     P2P_STAT_TRUSTED_PUB_KEY[]                    = "8f80f9a5a434a9f1510d13336228debfee9c918ce505efe225d8c94d045fa115";
 
 const char* const SEED_NODES[] = { 
-	"35.229.42.166",
-	"35.229.47.246",
+	"35.229.42.166:24217",
+	"35.229.47.246:24217"
 };
 
 struct CheckpointData {
